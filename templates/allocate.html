@@ -1,0 +1,99 @@
+<link rel="stylesheet" id="cf_styles-css" href="/cdn-cgi/styles/main.css" type="text/css" media="screen,projection" >
+<style>
+  html,
+body {
+  height: 100%;
+}
+body {
+  margin: auto;
+  font-family: sans-serif;
+  font-weight: 1000;
+  background-size: auto;
+  
+}
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+table {
+  width: 1000px;
+  height: 400px;
+  border-collapse: collapse;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  font-size: 30px;
+}
+th,
+td {
+  padding: 15px;
+  background-color: rgba(255, 255, 255, 0.2);
+  color:black;
+}
+th {
+  text-align: left;
+}
+thead th {
+  background-color: #55608f;
+}
+tbody tr:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+tbody td {
+  position: relative;
+
+}
+tbody td:hover:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -9999px;
+  bottom: -9999px;
+  background-color: rgba(255, 255, 255, 0.2);
+  z-index: -1;
+}
+.headings {
+  font-family: 'Dancing Script', cursive;
+  font-size: 80px;
+  margin-bottom: 30px;
+  color: rgb(255, 162, 40);
+  font-weight: bold;
+}
+  </style>
+{% extends 'index.html' %}
+
+{% block content %}
+<h1 class="headings">Your Exam Hall</h1>
+<table>
+    <thead>
+        <tr>
+            <th>Exam ID</th>
+            <th>Course</th>
+            <th>Room Number</th>
+        </tr>
+        </thead>
+        <tbody>
+{% for j in alloc %}
+{% for i in date %}
+{% if auth == j.Roll_no %}
+{% if i.Exam_ID == j.Exam_ID %}
+<tr>
+    <td>{{j.Exam_ID}}</td>
+    <td>{{i.Course_Name}}</td>
+    <td>{{j.Class_ID}}</td>
+</tr>
+{% endif %}
+{% endif %}
+{% endfor %}
+{% endfor %}
+</tbody>
+</table>
+
+
+    
+
+
+{% endblock %}

@@ -1,0 +1,69 @@
+{%load static%}
+<html>
+    <head>
+        <title>EMS</title>
+        <!--meta name="viewport" content="width=device-width, initial-scale=1"-->
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="static\style.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+        <link rel="shortcut icon" type="image/png" href="img/favicon.png">
+        <link rel="stylesheet" href="D:\SEM 3\DBMS CSE2\Front end\slider round.css">
+        <link href="https://fonts.googleapis.com/css?family=Aguafina+Script|Dancing+Script|Kaushan+Script|Open+Sans|Petit+Formal+Script|Pinyon+Script|Roboto|Rouge+Script" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet"> 
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@900&display=swap" rel="stylesheet">   
+        
+          
+        <script src="static\script.js" async></script>
+    </head>
+    <body background="static\bg7.jpg">
+        <header style="background-color:rgb(13, 235, 243);">
+           <div class="m-head" id="start"> 
+            <i class="fas fa-bars ham fa-3x"></i>
+            <div class="h-title">
+             <span class="ohayo">MGSV   University</span>
+             
+            </div>
+             
+           <div class="profile">
+           </div>
+           
+        </div> 
+        <nav class="nav1" >
+            <ul>
+                <li><a href="{% url 'home' %}"><i class="fas font-a fa-1x fa-home"></i>Home</a></li>
+                <li><a href="{% url 'schedule' %}"><i class="fas font-a fa-1x fa-calendar" aria-hidden="true"></i>Schedule</a></li>
+                <li><a href="{% url 'allocate' %}"><i class="fas font-a fa-1x fa-pencil" aria-hidden="true"></i>Exam Hall</a></li>
+                
+                
+                
+                <li id="dark"><a href="#"><i  class="fas font-a fa-1x fa-adjust"></i>
+                    <span class="slider round"></label> Dark Mode</a></li></span>
+                
+           
+           
+            </ul>
+        </nav>
+        <nav class="nav2">
+            <ul>
+                <li><a>Hello {{name}}</h5></a></li>
+                <li><a href="{% url 'profile' %}"><i class="fas font-a fa-1x fa-id-card"></i>Profile</a></li>
+                <!--<li><a href="#"><i class="fas font-a fa-1x fa-poll-h"></i>Grades</a></li>-->
+                <li><a href="{% url 'logout' %}"><i class="fas font-a fa-1x fa-sign-out-alt"></i>Log out</a></li>
+            </ul>
+          </nav>
+        </header>
+        <main>
+            <center>
+                {% block content  %}
+    
+                {% endblock %}
+            </center>
+        </main>
+        
+    </body>
+</html>

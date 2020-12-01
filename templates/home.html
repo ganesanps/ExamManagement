@@ -1,0 +1,66 @@
+
+<style>
+.container1 {
+    display: flex;
+    width: 100%;
+    padding: 4% 2%;
+    box-sizing: border-box;
+    height: 75vh;
+  }
+  
+  .box {
+    flex: 1;
+    overflow: hidden;
+    transition: .5s;
+    margin: 0 2%;
+    box-shadow: 0 20px 30px rgba(0,0,0,.1);
+    line-height: 0;
+  }
+  
+  .box > img {
+    width: 100%;
+    height: calc(80%);
+    object-fit:contain; 
+    transition: .5s;
+  }
+  
+  .box > span {
+    font-size: 3.8vh;
+    display: block;
+    text-align: center;
+    height: 10vh;
+    line-height: 2.6;
+  }
+  
+  .box:hover { flex: 1 1 50%; }
+  .box:hover > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .headings {
+	font-family: 'Dancing Script', cursive;
+	font-size: 50px;
+    margin-bottom: 30px;
+    color: rgb(255, 162, 40);
+    font-weight: bold;
+}
+</style>  
+{% extends 'index.html' %}
+{% block content %}
+<h1 class="headings">Schedules and Seat Allotments are out!<br>Check It Out</h1>
+<div class="container1">
+    <div class="box">
+      <img src="static\exam.png">
+      <span>The Night before Exam</span>
+    </div>
+    <div class="box">
+      <img src="static\exam2.png">
+      <span>During and after Exam Tips</span>
+    </div>
+    <div class="box">
+      <img src="static\exam3.jpg">
+      <span>Revision Tips</span>
+    </div>
+  </div>
+{% endblock %}
