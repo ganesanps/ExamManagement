@@ -3,7 +3,7 @@
 */
 
 @import url(fonts.css);
-
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap');
 html, body {
     height: 100%;
 }
@@ -196,6 +196,7 @@ div.help ul {
 
 p img, h1 img, h2 img, h3 img, h4 img, td img {
     vertical-align: middle;
+    height: 50px;
 }
 
 .quiet, a.quiet:link, a.quiet:visited {
@@ -813,7 +814,7 @@ table#change-history tbody th {
     justify-content: space-between;
     align-items: center;
     padding: 10px 40px;
-    background: #417690;
+    background: #3eddc8;
     color: #ffc;
     overflow: hidden;
 }
@@ -835,11 +836,12 @@ table#change-history tbody th {
     margin: 0 20px 0 0;
     font-weight: 300;
     font-size: 24px;
-    color: #f5dd5d;
+    font-family: 'Dancing Script', cursive;
+    color:cyan;
 }
 
 #branding h1, #branding h1 a:link, #branding h1 a:visited {
-    color: #f5dd5d;
+    color: #09ffd2;
 }
 
 #branding h2 {
